@@ -133,6 +133,24 @@
             </objects>
             <point key="canvasLocation" x="2131" y="276"/>
         </scene>
+        <!--Item View Controller-->
+        <scene sceneID="4fM-UN-MZf">
+            <objects>
+                <viewController id="2qW-aX-GbH" customClass="ItemViewController" customModule="chemCat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Jxd-j1-7Da"/>
+                        <viewControllerLayoutGuide type="bottom" id="ho2-5M-RoE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OXQ-gs-miF">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AXg-HP-zch" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2883" y="-362"/>
+        </scene>
         <!--Check Inventory-->
         <scene sceneID="8c8-mb-tXL">
             <objects>

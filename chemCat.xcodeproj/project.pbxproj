@@ -17,6 +17,11 @@
 		0FE287F31ACB43720055044F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE287F21ACB43720055044F /* LoginViewController.swift */; };
 		0FE48CE51ACE16CF0050F0EC /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE48CE41ACE16CF0050F0EC /* CatalogViewController.swift */; };
 		0FE48CE71ACE1AC70050F0EC /* CatalogDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE48CE61ACE1AC70050F0EC /* CatalogDetailViewController.swift */; };
+		4ACAC5B61ADB0EED006F224A /* ItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACAC5B51ADB0EED006F224A /* ItemViewController.swift */; };
+		4ACAC5BD1ADB11A5006F224A /* ChemicalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACAC5B91ADB11A5006F224A /* ChemicalModel.swift */; };
+		4ACAC5BE1ADB11A5006F224A /* EquipmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACAC5BA1ADB11A5006F224A /* EquipmentModel.swift */; };
+		4ACAC5BF1ADB11A5006F224A /* InventoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACAC5BB1ADB11A5006F224A /* InventoryModel.swift */; };
+		4ACAC5C01ADB11A5006F224A /* LabMaterialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACAC5BC1ADB11A5006F224A /* LabMaterialModel.swift */; };
 		CD3271661AD6D566006DD527 /* star.png in Resources */ = {isa = PBXBuildFile; fileRef = CD3271651AD6D566006DD527 /* star.png */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +50,11 @@
 		0FE287F21ACB43720055044F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0FE48CE41ACE16CF0050F0EC /* CatalogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
 		0FE48CE61ACE1AC70050F0EC /* CatalogDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogDetailViewController.swift; sourceTree = "<group>"; };
+		4ACAC5B51ADB0EED006F224A /* ItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemViewController.swift; sourceTree = "<group>"; };
+		4ACAC5B91ADB11A5006F224A /* ChemicalModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChemicalModel.swift; path = ../ChemicalModel.swift; sourceTree = "<group>"; };
+		4ACAC5BA1ADB11A5006F224A /* EquipmentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EquipmentModel.swift; path = ../EquipmentModel.swift; sourceTree = "<group>"; };
+		4ACAC5BB1ADB11A5006F224A /* InventoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InventoryModel.swift; path = ../InventoryModel.swift; sourceTree = "<group>"; };
+		4ACAC5BC1ADB11A5006F224A /* LabMaterialModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LabMaterialModel.swift; path = ../LabMaterialModel.swift; sourceTree = "<group>"; };
 		CD3271651AD6D566006DD527 /* star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = star.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -87,6 +97,11 @@
 		0FE287CD1ACB3A0D0055044F /* chemCat */ = {
 			isa = PBXGroup;
 			children = (
+				4ACAC5B91ADB11A5006F224A /* ChemicalModel.swift */,
+				4ACAC5BA1ADB11A5006F224A /* EquipmentModel.swift */,
+				4ACAC5BB1ADB11A5006F224A /* InventoryModel.swift */,
+				4ACAC5BC1ADB11A5006F224A /* LabMaterialModel.swift */,
+				4ACAC5B51ADB0EED006F224A /* ItemViewController.swift */,
 				0FE287D01ACB3A0D0055044F /* AppDelegate.swift */,
 				0FE287D21ACB3A0D0055044F /* MasterViewController.swift */,
 				0FE287D41ACB3A0D0055044F /* DetailViewController.swift */,
@@ -228,11 +243,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ACAC5BE1ADB11A5006F224A /* EquipmentModel.swift in Sources */,
+				4ACAC5B61ADB0EED006F224A /* ItemViewController.swift in Sources */,
 				0FE48CE51ACE16CF0050F0EC /* CatalogViewController.swift in Sources */,
 				0FE287F31ACB43720055044F /* LoginViewController.swift in Sources */,
 				0FE287D51ACB3A0D0055044F /* DetailViewController.swift in Sources */,
+				4ACAC5C01ADB11A5006F224A /* LabMaterialModel.swift in Sources */,
 				0FE48CE71ACE1AC70050F0EC /* CatalogDetailViewController.swift in Sources */,
+				4ACAC5BD1ADB11A5006F224A /* ChemicalModel.swift in Sources */,
 				0FE287D31ACB3A0D0055044F /* MasterViewController.swift in Sources */,
+				4ACAC5BF1ADB11A5006F224A /* InventoryModel.swift in Sources */,
 				0FE287D11ACB3A0D0055044F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
