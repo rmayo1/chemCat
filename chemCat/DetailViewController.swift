@@ -10,6 +10,10 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet weak var prevUIBarButton: UIBarButtonItem!
+    @IBAction func prevUIBarButtonPress(sender: UIBarButtonItem) {
+        performSegueWithIdentifier("backToCategories", sender: sender)
+    }
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
 

@@ -10,12 +10,18 @@ import UIKit
 
 
 class CatalogViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    @IBOutlet weak var nextUIBarButton: UIBarButtonItem!
+    @IBAction func nextUIBarButton(sender: UIBarButtonItem) {
+        performSegueWithIdentifier("toItems", sender: sender)
+    }
+    
+    
     var objects = NSMutableArray()
     private let categories = [
         "Chemicals", "Tools", "Equipment"]
     let simpleTableIdentifier = "SimpleTableIdentifier"
 
+    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
     
     override func awakeFromNib() {
         super.awakeFromNib()

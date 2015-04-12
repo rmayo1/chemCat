@@ -133,10 +133,10 @@
             </objects>
             <point key="canvasLocation" x="2131" y="276"/>
         </scene>
-        <!--Item View Controller-->
+        <!--Item-->
         <scene sceneID="4fM-UN-MZf">
             <objects>
-                <viewController id="2qW-aX-GbH" customClass="ItemViewController" customModule="chemCat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2qW-aX-GbH" customClass="DetailViewController" customModule="chemCat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Jxd-j1-7Da"/>
                         <viewControllerLayoutGuide type="bottom" id="ho2-5M-RoE"/>
@@ -144,12 +144,37 @@
                     <view key="view" contentMode="scaleToFill" id="OXQ-gs-miF">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eXB-70-Pbb">
+                                <rect key="frame" x="0.0" y="15" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Item View" id="AqD-Yh-YMO">
+                                        <barButtonItem key="leftBarButtonItem" title="Previous" id="hDc-fZ-vMi">
+                                            <connections>
+                                                <action selector="prevUIBarButtonPress:" destination="2qW-aX-GbH" id="qMO-nW-P0w"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ho2-5M-RoE" firstAttribute="top" secondItem="eXB-70-Pbb" secondAttribute="bottom" constant="492" id="8Fl-0p-QOh"/>
+                            <constraint firstItem="eXB-70-Pbb" firstAttribute="leading" secondItem="OXQ-gs-miF" secondAttribute="leading" id="juB-72-i87"/>
+                            <constraint firstAttribute="trailing" secondItem="eXB-70-Pbb" secondAttribute="trailing" id="lhW-di-Cpi"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="d73-Ok-g0W"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="prevUIBarButton" destination="hDc-fZ-vMi" id="vz5-d4-bdq"/>
+                        <segue destination="XF8-5y-HDp" kind="show" identifier="backToCategories" id="vG9-hR-m3R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AXg-HP-zch" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2883" y="-362"/>
+            <point key="canvasLocation" x="2959" y="-460"/>
         </scene>
         <!--Check Inventory-->
         <scene sceneID="8c8-mb-tXL">
@@ -177,6 +202,11 @@
                                     <navigationItem title="CheckOut" id="Q5B-Zj-Vc5">
                                         <barButtonItem key="backBarButtonItem" title="Test" id="FQD-7G-eho"/>
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="8oH-HA-O3z"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Next" id="lon-US-L6C">
+                                            <connections>
+                                                <action selector="nextUIBarButton:" destination="XF8-5y-HDp" id="bfS-Go-yX6"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -195,6 +225,10 @@
                     <tabBarItem key="tabBarItem" title="Item 1" id="1wY-YV-zv2"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <outlet property="nextUIBarButton" destination="lon-US-L6C" id="e0g-rx-dJI"/>
+                        <segue destination="2qW-aX-GbH" kind="show" identifier="toItems" id="xF4-oo-q8V"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a5E-Vq-zYE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -223,4 +257,7 @@
     <resources>
         <image name="logo" width="406" height="396"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="vG9-hR-m3R"/>
+    </inferredMetricsTieBreakers>
 </document>
