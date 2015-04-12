@@ -10,6 +10,8 @@
 	<string>chemCat</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+		<key>C27BD2706315E5AC9135DE48FCAF7B17F1E94B51</key>
+		<string>https://github.com/rmayo1/chemCat.git</string>
 		<key>CF3F327A4ED8EE32950E0935351F698D9C3F5EA5</key>
 		<string>https://github.com/rawaid/ChemCat.git</string>
 	</dict>
@@ -17,15 +19,17 @@
 	<string>chemCat.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>CF3F327A4ED8EE32950E0935351F698D9C3F5EA5</key>
+		<key>C27BD2706315E5AC9135DE48FCAF7B17F1E94B51</key>
 		<string>../..</string>
+		<key>CF3F327A4ED8EE32950E0935351F698D9C3F5EA5</key>
+		<string>../../../ChemCat</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/rawaid/ChemCat.git</string>
+	<string>https://github.com/rmayo1/chemCat.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>CF3F327A4ED8EE32950E0935351F698D9C3F5EA5</string>
+	<string>C27BD2706315E5AC9135DE48FCAF7B17F1E94B51</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -35,6 +39,14 @@
 			<string>CF3F327A4ED8EE32950E0935351F698D9C3F5EA5</string>
 			<key>IDESourceControlWCCName</key>
 			<string>ChemCat</string>
+		</dict>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C27BD2706315E5AC9135DE48FCAF7B17F1E94B51</string>
+			<key>IDESourceControlWCCName</key>
+			<string>chemCat-proj</string>
 		</dict>
 	</array>
 </dict>
