@@ -21,7 +21,7 @@ class Chemical : LabMaterial {
         super.init(barcode: barcode, name: name, stock: stock)
     }
     
-    func getEHSStatus() -> Bool {
+    func getEhsStatus() -> Bool {
         return self.ehs
     }
     
@@ -32,5 +32,5 @@ class Chemical : LabMaterial {
     func getAmount() -> String {
         return String(self.stock) + self.units
     }
-
+    
 }

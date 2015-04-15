@@ -26,10 +26,6 @@ class LabMaterial {
         return self.name
     }
     
-    func getStock() -> Int {
-        return self.stock
-    }
-    
     func getUsers() -> [String] {
         return self.userNames
     }

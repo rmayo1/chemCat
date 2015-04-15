@@ -27,7 +27,7 @@ class Equipment : LabMaterial {
         return self.condition
     }
     
-    func getAmount() -> String {
+    func getStock() -> String {
         return String(self.stock)
     }
     
