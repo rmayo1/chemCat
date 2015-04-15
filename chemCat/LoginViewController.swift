@@ -20,11 +20,11 @@ class LoginViewController: UIViewController {
         let uname = String(uname_field.text as NSString)
         let pword = String(pword_field.text as NSString)
         //
-        if uname == "Joe" && pword == "Awesome"{
-            self.performSegueWithIdentifier("successful_login", sender: self)
-        }else{
-            desc_field.text = "Failure"
-        }
+        // if uname == "Joe" && pword == "Awesome"{
+        self.performSegueWithIdentifier("successful_login", sender: self)
+        // }else{
+        //    desc_field.text = "Failure"
+        //}
     }
     
     override func viewDidLoad() {
