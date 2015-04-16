@@ -11,8 +11,8 @@ import UIKit
 
 class CatalogViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var nextUIBarButton: UIBarButtonItem!
-    @IBAction func nextUIBarButton(sender: UIBarButtonItem) {
-        performSegueWithIdentifier("toItems", sender: sender)
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier("toItems", sender: self)
     }
     
     
@@ -52,7 +52,7 @@ class CatalogViewController: UIViewController, UITableViewDataSource, UITableVie
 //        cell!.imageView?.image = highlightedImage
         
         cell?.textLabel?.text = categories[indexPath.row]
-        cell?.textLabel?.font = UIFont.boldSystemFontOfSize(50)
+        cell?.textLabel?.font = UIFont.boldSystemFontOfSize(10)
         
         return cell!
     }
