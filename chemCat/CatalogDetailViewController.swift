@@ -13,7 +13,7 @@ class CatalogDetailViewController: UIViewController {
     
     @IBOutlet weak var detailDescriptionLabel: UILabel!
     
-    
+    var theInventoryModel: sharedInventoryModel = sharedInventoryModel.theSharedInventoryModel
     var detailItem: AnyObject? {
         didSet {
             // Update the view.

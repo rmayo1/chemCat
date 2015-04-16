@@ -27,6 +27,8 @@ class CatalogViewController: UIViewController, UITableViewDataSource, UITableVie
         super.awakeFromNib()
     }
     
+    var theInventoryModel: sharedInventoryModel = sharedInventoryModel.theSharedInventoryModel
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
