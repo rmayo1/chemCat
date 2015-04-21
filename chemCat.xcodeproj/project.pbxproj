@@ -17,6 +17,20 @@
 		0FE287F31ACB43720055044F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE287F21ACB43720055044F /* LoginViewController.swift */; };
 		0FE48CE51ACE16CF0050F0EC /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE48CE41ACE16CF0050F0EC /* CatalogViewController.swift */; };
 		0FE48CE71ACE1AC70050F0EC /* CatalogDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE48CE61ACE1AC70050F0EC /* CatalogDetailViewController.swift */; };
+		4AB38CBD1AE6FDD700A0DD11 /* sharedInventoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6A9FB1ADF305000D5C15D /* sharedInventoryModel.swift */; };
+		4AB38CBE1AE6FDDC00A0DD11 /* CatalogDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE48CE61ACE1AC70050F0EC /* CatalogDetailViewController.swift */; };
+		4AB38CBF1AE6FDDF00A0DD11 /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE48CE41ACE16CF0050F0EC /* CatalogViewController.swift */; };
+		4AB38CC01AE6FDE300A0DD11 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE287F21ACB43720055044F /* LoginViewController.swift */; };
+		4AB38CC11AE6FDE500A0DD11 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE287D41ACB3A0D0055044F /* DetailViewController.swift */; };
+		4AB38CC21AE6FDE800A0DD11 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE287D21ACB3A0D0055044F /* MasterViewController.swift */; };
+		4AB38CC31AE6FDEB00A0DD11 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE287D01ACB3A0D0055044F /* AppDelegate.swift */; };
+		4AB38CC41AE6FDEE00A0DD11 /* LabMaterialModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACAC5BC1ADB11A5006F224A /* LabMaterialModel.swift */; };
+		4AB38CC51AE6FDF100A0DD11 /* InventoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACAC5BB1ADB11A5006F224A /* InventoryModel.swift */; };
+		4AB38CC61AE6FDF400A0DD11 /* EquipmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACAC5BA1ADB11A5006F224A /* EquipmentModel.swift */; };
+		4AB38CC71AE6FDF600A0DD11 /* ChemicalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACAC5B91ADB11A5006F224A /* ChemicalModel.swift */; };
+		4AB38CC81AE6FE0200A0DD11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FE287D61ACB3A0D0055044F /* Main.storyboard */; };
+		4AB38CC91AE6FE0500A0DD11 /* logo.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FE287D91ACB3A0D0055044F /* logo.xcassets */; };
+		4AB38CCA1AE6FE0900A0DD11 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FE287DB1ACB3A0D0055044F /* LaunchScreen.xib */; };
 		4ACAC5BD1ADB11A5006F224A /* ChemicalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACAC5B91ADB11A5006F224A /* ChemicalModel.swift */; };
 		4ACAC5BE1ADB11A5006F224A /* EquipmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACAC5BA1ADB11A5006F224A /* EquipmentModel.swift */; };
 		4ACAC5BF1ADB11A5006F224A /* InventoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACAC5BB1ADB11A5006F224A /* InventoryModel.swift */; };
@@ -233,6 +247,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AB38CC91AE6FE0500A0DD11 /* logo.xcassets in Resources */,
+				4AB38CCA1AE6FE0900A0DD11 /* LaunchScreen.xib in Resources */,
+				4AB38CC81AE6FE0200A0DD11 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,7 +278,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4AB38CC31AE6FDEB00A0DD11 /* AppDelegate.swift in Sources */,
+				4AB38CBF1AE6FDDF00A0DD11 /* CatalogViewController.swift in Sources */,
+				4AB38CBE1AE6FDDC00A0DD11 /* CatalogDetailViewController.swift in Sources */,
+				4AB38CC61AE6FDF400A0DD11 /* EquipmentModel.swift in Sources */,
+				4AB38CC41AE6FDEE00A0DD11 /* LabMaterialModel.swift in Sources */,
 				0FE287E91ACB3A0D0055044F /* chemCatTests.swift in Sources */,
+				4AB38CC11AE6FDE500A0DD11 /* DetailViewController.swift in Sources */,
+				4AB38CC01AE6FDE300A0DD11 /* LoginViewController.swift in Sources */,
+				4AB38CC21AE6FDE800A0DD11 /* MasterViewController.swift in Sources */,
+				4AB38CC71AE6FDF600A0DD11 /* ChemicalModel.swift in Sources */,
+				4AB38CC51AE6FDF100A0DD11 /* InventoryModel.swift in Sources */,
+				4AB38CBD1AE6FDD700A0DD11 /* sharedInventoryModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

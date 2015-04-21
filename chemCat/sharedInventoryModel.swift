@@ -22,6 +22,7 @@ class sharedInventoryModel {
     var chemicalList: [Chemical]//master list of songs
     var equipmentList: [Equipment]//master list of playlists
     var outItemsList: [LabMaterial]//master list of albums
+    var mode:String
     
     
     // sharedSongModel Constructor
@@ -29,10 +30,22 @@ class sharedInventoryModel {
     // Last Modified: 3/1/15]
     // Purpose: Initializes instance reference of sharedSongModel
     init(){
-        chemicalList = [Chemical]()//view controllers will reference this same instance for songList
+        mode=""
         equipmentList = [Equipment]()//view controlers will reference this same instance for albumList
         outItemsList = [LabMaterial]()//view controllers will reference this same instace for playlistList
-        // start with an empty song in the list
+        chemicalList = [Chemical]()//view controllers will reference this same instance for songList
+        let myChemical1 = Chemical(barcode: 10000001, name: "Hydrochloric Acid", stock: 25, userNames: [], expDate: 2018, units: "ml", ehs: true)
+        let myChemical2 = Chemical(barcode: 10000002, name: "Dihydrogen Monoxide", stock: 50, userNames: [], expDate: 2100, units: "liters", ehs: false)
+        let myChemical3 = Chemical(barcode: 10000003, name: "Potassium Deliaite", stock: 100, userNames: [], expDate: 2015, units: "ml", ehs: true)
+        addChemical(myChemical1)
+        addChemical(myChemical2)
+        addChemical(myChemical3)
+        let myEquipment1 = Equipment(barcode: 20000001, name: "50ml Graduated Cylinder", stock: 1, userNames: [], condition: "like-new", breakable: true)
+        let myEquipment2 = Equipment(barcode: 20000002, name: "Beaker", stock: 3, userNames: [], condition: "worn", breakable: true)
+        let myEquipment3 = Equipment(barcode: 20000003, name: "Goggles", stock: 10, userNames: [], condition: "like-new", breakable: false)
+        addEquipment(myEquipment1)
+        addEquipment(myEquipment2)
+        addEquipment(myEquipment3)
     }
     
     func addChemical(newChemical:Chemical){

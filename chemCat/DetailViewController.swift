@@ -9,13 +9,14 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
+    
+    var theInventoryModel: sharedInventoryModel = sharedInventoryModel.theSharedInventoryModel
     @IBOutlet weak var prevUIBarButton: UIBarButtonItem!
     @IBAction func prevUIBarButtonPress(sender: UIBarButtonItem) {
+        
         performSegueWithIdentifier("backToCategories", sender: sender)
     }
     @IBOutlet weak var detailDescriptionLabel: UILabel!
-
 
     var detailItem: AnyObject? {
         didSet {
@@ -23,7 +24,11 @@ class DetailViewController: UIViewController {
             self.configureView()
         }
     }
-
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return theInventoryModel.chemicalList.count
+    }
+    
+    
     func configureView() {
         // Update the user interface for the detail item.
         if let detail: AnyObject = self.detailItem {
@@ -32,8 +37,11 @@ class DetailViewController: UIViewController {
             }
         }
     }
+    
 
+    
     override func viewDidLoad() {
+        println(theInventoryModel.mode)
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
