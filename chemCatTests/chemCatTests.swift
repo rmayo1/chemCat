@@ -113,19 +113,25 @@ class chemCatTests: XCTestCase {
         
         var myEquipment = Equipment(barcode: barcode, name: name, stock: stock, userNames: [], condition: condition, breakable: breakable)
         
-        /*myInventory.addChemical(myChemical)
+        myInventory.addChemical(myChemical)
         myInventory.addEquipment(myEquipment)
         
-        XCTAssertEqual(myInventory.getChemicals(), myChemical, "Chemical was added")
-        XCTAssertNotNil(myInventory.addEquipment(myEquipment), "Equipment was added")
+        XCTAssertEqual(myInventory.getChemical(myChemical), true, "Chemical was not added")
+        XCTAssertEqual(myInventory.getEquipment(myEquipment), true, "Equipment was not added")
         
         myInventory.checkOutChem(myChemical)
-        myInventory.checkOutEq(myEquipment)
+        XCTAssertEqual(myInventory.getOutItem(myChemical), true, "Chemical was not checked out")
+        myInventory.checkInChem(myChemical)
         
-        XCTAssertEqual(myInventory.getChemicals(), myEquipment, "Chemical was checked out")
-        XCTAssertNotNil(, "Equipment was checked out")
-        XCTAssertNotNil(myInventory.checkInChem(myChemical), "Chemical was checked in")
-        XCTAssertNotNil(myInventory.checkInEq(myEquipment), "Equipment was checked in")*/
+        myInventory.checkOutEq(myEquipment)
+        XCTAssertEqual(myInventory.getOutItem(myEquipment), true, "Equipment was not checked out")
+        myInventory.checkInEq(myEquipment)
+        
+        myInventory.removeChem(myChemical)
+        myInventory.removeEq(myEquipment)
+        
+        XCTAssertEqual(myInventory.getChemical(myChemical), false, "Chemical was not removed")
+        XCTAssertEqual(myInventory.getEquipment(myEquipment), false, "Equipment was not removed")
         
     }
     

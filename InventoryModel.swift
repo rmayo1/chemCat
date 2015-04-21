@@ -78,12 +78,31 @@ class InventoryModel {
         equipment.append(outItem)
     }
     
-    func getChemicals() -> [Chemical]{
-        return chemicals
+    func getChemical(chem: Chemical) -> Bool{
+        for Chemical in chemicals {
+            if Chemical.getName() == chem.getName() {
+                return true
+            }
+        }
+        return false
     }
     
-    func getEquipment() -> [Equipment] {
-        return equipment
+    func getEquipment(eq: Equipment) -> Bool {
+        for Equipment in equipment {
+            if Equipment.getName() == eq.getName() {
+                return true
+            }
+        }
+        return false
+    }
+    
+    func getOutItem(out: LabMaterial) -> Bool {
+        for LabMaterial in outItems {
+            if LabMaterial.getName() == out.getName() {
+                return true
+            }
+        }
+        return false
     }
     
     func orderItem(emptyItem: LabMaterial) -> String{
