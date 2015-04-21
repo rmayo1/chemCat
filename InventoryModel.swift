@@ -78,6 +78,14 @@ class InventoryModel {
         equipment.append(outItem)
     }
     
+    func getChemicals() -> [Chemical]{
+        return chemicals
+    }
+    
+    func getEquipment() -> [Equipment] {
+        return equipment
+    }
+    
     func orderItem(emptyItem: LabMaterial) -> String{
         //code to open up vendor's order form in browser
         //openURL(NSURL(string: "http://www.google.com"))

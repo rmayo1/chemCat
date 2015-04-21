@@ -52,8 +52,7 @@ class chemCatTests: XCTestCase {
         var name = "hydrochloric acid"
         var barcode = 123
         var stock = 5
-        var userNames = ["rmayo1"]
-        
+        var userNames = []
         
         var myLabMaterial = LabMaterial(barcode: barcode, name: name, stock: stock, userNames: [])
         
@@ -66,7 +65,7 @@ class chemCatTests: XCTestCase {
         var name = "hydrochloric acid"
         var barcode = 123
         var stock = 50
-        var units = "mL"
+        var units = "ml"
         var expDate = 2016
         var ehs = true
         
@@ -100,10 +99,31 @@ class chemCatTests: XCTestCase {
         var myInventory = InventoryModel()
         
         XCTAssertNotNil(myInventory, "Inventory was created successfully")
-        /*XCTAssertNotNil(myInventory.addChemical(myChemical), "Chemical was added")
+        
+        var name = "hydrochloric acid"
+        var barcode = 123
+        var stock = 50
+        var units = "ml"
+        var expDate = 2016
+        var ehs = true
+        var condition = "New"
+        var breakable = true
+        
+        var myChemical = Chemical(barcode: barcode, name: name, stock: stock, userNames: [], expDate: expDate, units: units, ehs: ehs)
+        
+        var myEquipment = Equipment(barcode: barcode, name: name, stock: stock, userNames: [], condition: condition, breakable: breakable)
+        
+        /*myInventory.addChemical(myChemical)
+        myInventory.addEquipment(myEquipment)
+        
+        XCTAssertEqual(myInventory.getChemicals(), myChemical, "Chemical was added")
         XCTAssertNotNil(myInventory.addEquipment(myEquipment), "Equipment was added")
-        XCTAssertNotNil(myInventory.checkOutChem(myChemical), "Chemical was checked out")
-        XCTAssertNotNil(myInventory.checkOutEq(myEquipment), "Equipment was checked out")
+        
+        myInventory.checkOutChem(myChemical)
+        myInventory.checkOutEq(myEquipment)
+        
+        XCTAssertEqual(myInventory.getChemicals(), myEquipment, "Chemical was checked out")
+        XCTAssertNotNil(, "Equipment was checked out")
         XCTAssertNotNil(myInventory.checkInChem(myChemical), "Chemical was checked in")
         XCTAssertNotNil(myInventory.checkInEq(myEquipment), "Equipment was checked in")*/
         
