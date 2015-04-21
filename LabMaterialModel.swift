@@ -15,7 +15,7 @@ class LabMaterial {
     var stock : Int
     var userNames : [String]
     
-    init(barcode:Int, name:String, stock:Int){
+    init(barcode:Int, name:String, stock:Int, userNames:[String]){
         self.barcode = barcode
         self.name = name
         self.stock = stock

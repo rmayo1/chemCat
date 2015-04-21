@@ -13,10 +13,10 @@ class Equipment : LabMaterial {
     var condition : String
     var breakable : Bool
     
-    init(barcode:Int, name:String, stock:Int, condition:String, breakable:Bool) {
+    init(barcode:Int, name:String, stock:Int, userNames: [String], condition:String, breakable:Bool) {
         self.condition = condition
         self.breakable = breakable
-        super.init(barcode: barcode, name: name, stock: stock)
+        super.init(barcode: barcode, name: name, stock: stock, userNames: [])
     }
     
     func isBreakable() -> Bool {
@@ -27,8 +27,8 @@ class Equipment : LabMaterial {
         return self.condition
     }
     
-    func getStock() -> String {
-        return String(self.stock)
+    func getStock() -> Int {
+        return self.stock
     }
     
 }

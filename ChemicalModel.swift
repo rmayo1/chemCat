@@ -14,11 +14,11 @@ class Chemical : LabMaterial {
     var expDate : Int
     var units : String
     
-    init(barcode:Int, name:String, stock:Int, expDate:Int, units:String, ehs:Bool) {
+    init(barcode:Int, name:String, stock:Int, userNames: [String], expDate:Int, units:String, ehs:Bool) {
         self.ehs = ehs
         self.expDate = expDate
         self.units = units
-        super.init(barcode: barcode, name: name, stock: stock)
+        super.init(barcode: barcode, name: name, stock: stock, userNames: [])
     }
     
     func getEhsStatus() -> Bool {

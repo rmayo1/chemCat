@@ -48,17 +48,63 @@ class chemCatTests: XCTestCase {
         XCTAssertNotNil(v5.view, "CatalogDetailView Did Not Load")
     }
     
-    func testChemicalModel() {
+    func testLabMaterialModel() {
         let name = "hydrochloric acid"
         let barcode = 123
         let stock = 5
-        let units = "mL"
-        let expDate = 2016
-        let ehs = true
         
-        Chemical(barcode: barcode, name: name, stock: stock, expDate: expDate, units: units, ehs: ehs)
+        var myLabMaterial = LabMaterial(barcode: barcode, name: name, stock: stock, userNames: [])
         
-        //XCTAssertTrue(<#expression: @autoclosure () -> BooleanType#>, <#message: String#>)
+        XCTAssertNotNil(myLabMaterial, "LabMaterial was created successfully")
+        XCTAssertTrue(myLabMaterial.getName() = name, "Name matches input")
+        XCTAssertTrue(myLabMaterial.getUsers() = [], "User names match input")
+        
+    }
+    
+    func testChemicalModel() {
+        var name = "hydrochloric acid"
+        var barcode = 123
+        var stock = 50
+        var units = "mL"
+        var expDate = 2016
+        var ehs = true
+        
+        var myChemical = Chemical(barcode: barcode, name: name, stock: stock, userNames: [], expDate: expDate, units: units, ehs: ehs)
+        
+        XCTAssertNotNil(myChemical, "Chemical was created successfully")
+        XCTAssertTrue(myChemical.getAmount() = "50mL", "Amount matches inputs")
+        XCTAssertTrue(myChemical.getEhsStatus() = ehs, "EHS status matches input")
+        XCTAssertTrue(myChemical.getExpDate() = expDate, "Expiration date matches input")
+        
+    }
+    
+    func testEquipModel() {
+        var name = "graduated cylinder"
+        var barcode = 456
+        var stock = 5
+        var condition = "New"
+        var breakable = true
+        
+        var myEquipment = Equipment(barcode: barcode, name: name, stock: stock, userNames: [], condition: condition, breakable: breakable)
+        
+        XCTAssertNotNil(myEquipment, "Equipment was created successfully")
+        XCTAssertTrue(myEquipment.getStock() = stock, "Stock maches input")
+        XCTAssertTrue(myEquipment.getCondition() = condition, "Condition matches input")
+        XCTAssertTrue(myEquipment.isBreakable() = breakable, "Equipment is breakable")
+        
+    }
+    
+    func testInventoryModel() {
+        
+        var myInventory = InventoryModel()
+        
+        XCTAssertNotNil(myInventory, "Inventory was created successfully")
+        XCTAssertNotNil(myInventory.addChemical(myChemical), "Chemical was added")
+        XCTAssertNotNil(myInventory.addEquipment(myEquipment), "Equipment was added")
+        XCTAssertNotNil(myInventory.checkOutChem(myChemical), "Chemical was checked out")
+        XCTAssertNotNil(myInventory.checkOutEq(myEquipment), "Equipment was checked out")
+        XCTAssertNotNil(myInventory.checkInChem(myChemical), "Chemical was checked in")
+        XCTAssertNotNil(myInventory.checkInEq(myEquipment), "Equipment was checked in")
         
     }
     
