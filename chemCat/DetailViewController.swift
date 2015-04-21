@@ -11,6 +11,9 @@ import UIKit
 class DetailViewController: UIViewController {
     
     var theInventoryModel: sharedInventoryModel = sharedInventoryModel.theSharedInventoryModel
+    let simpleTableIdentifier = "SimpleTableIdentifier"
+    var displayList = []
+    
     @IBOutlet weak var prevUIBarButton: UIBarButtonItem!
     @IBAction func prevUIBarButtonPress(sender: UIBarButtonItem) {
         
@@ -24,10 +27,6 @@ class DetailViewController: UIViewController {
             self.configureView()
         }
     }
-    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return theInventoryModel.chemicalList.count
-    }
-    
     
     func configureView() {
         // Update the user interface for the detail item.
@@ -38,14 +37,41 @@ class DetailViewController: UIViewController {
         }
     }
     
-
-    
     override func viewDidLoad() {
+        if (theInventoryModel.mode == "Equipment"){
+            displayList = theInventoryModel.equipmentList
+        }
+        if (theInventoryModel.mode == "Chemicals"){
+            displayList = theInventoryModel.chemicalList
+        }
         println(theInventoryModel.mode)
+        println(displayList.count)
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
     }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return displayList.count
+    }
+    
+    func tableView(tableView:UITableView, cellForRowAtIndexPath indexPath:NSIndexPath) -> UITableViewCell {
+        var cell = tableView.dequeueReusableCellWithIdentifier(simpleTableIdentifier) as? UITableViewCell
+        if (cell == nil){
+            cell = UITableViewCell(style:UITableViewCellStyle.Default, reuseIdentifier:simpleTableIdentifier)
+            cell!.textLabel?.text = "things"
+        }
+        //        let image = UIImage(named: "star")
+        //        cell!.imageView?.image = image
+        //        let highlightedImage = UIImage(named: "star")
+        //        cell!.imageView?.image = highlightedImage
+        
+        //cell?.textLabel?.text = string(displayList[indexPath.row])
+        cell?.textLabel?.font = UIFont.boldSystemFontOfSize(10)
+        
+        return cell!
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

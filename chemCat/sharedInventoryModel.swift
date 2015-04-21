@@ -45,7 +45,7 @@ class sharedInventoryModel {
         let myEquipment3 = Equipment(barcode: 20000003, name: "Goggles", stock: 10, userNames: [], condition: "like-new", breakable: false)
         addEquipment(myEquipment1)
         addEquipment(myEquipment2)
-        addEquipment(myEquipment3)
+        //addEquipment(myEquipment3)
     }
     
     func addChemical(newChemical:Chemical){
