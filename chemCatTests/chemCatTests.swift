@@ -39,13 +39,11 @@ class chemCatTests: XCTestCase {
         let v2 = DetailViewController()
         let v3 = LoginViewController()
         let v4 = CatalogViewController()
-        let v5 = CatalogDetailViewController()
         
         XCTAssertNotNil(v1.view, "MasterView Did Not Load")
         XCTAssertNotNil(v2.view, "DetailView Did Not Load")
         XCTAssertNotNil(v3.view, "LoginView Did Not Load")
         XCTAssertNotNil(v4.view, "CatalogView Did Not Load")
-        XCTAssertNotNil(v5.view, "CatalogDetailView Did Not Load")
     }
     
     func testLabMaterialModel() {

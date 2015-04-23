@@ -16,9 +16,7 @@
 		0FE287E91ACB3A0D0055044F /* chemCatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE287E81ACB3A0D0055044F /* chemCatTests.swift */; };
 		0FE287F31ACB43720055044F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE287F21ACB43720055044F /* LoginViewController.swift */; };
 		0FE48CE51ACE16CF0050F0EC /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE48CE41ACE16CF0050F0EC /* CatalogViewController.swift */; };
-		0FE48CE71ACE1AC70050F0EC /* CatalogDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE48CE61ACE1AC70050F0EC /* CatalogDetailViewController.swift */; };
 		4AB38CBD1AE6FDD700A0DD11 /* sharedInventoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6A9FB1ADF305000D5C15D /* sharedInventoryModel.swift */; };
-		4AB38CBE1AE6FDDC00A0DD11 /* CatalogDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE48CE61ACE1AC70050F0EC /* CatalogDetailViewController.swift */; };
 		4AB38CBF1AE6FDDF00A0DD11 /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE48CE41ACE16CF0050F0EC /* CatalogViewController.swift */; };
 		4AB38CC01AE6FDE300A0DD11 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE287F21ACB43720055044F /* LoginViewController.swift */; };
 		4AB38CC11AE6FDE500A0DD11 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE287D41ACB3A0D0055044F /* DetailViewController.swift */; };
@@ -63,7 +61,6 @@
 		0FE287E81ACB3A0D0055044F /* chemCatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chemCatTests.swift; sourceTree = "<group>"; };
 		0FE287F21ACB43720055044F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0FE48CE41ACE16CF0050F0EC /* CatalogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
-		0FE48CE61ACE1AC70050F0EC /* CatalogDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogDetailViewController.swift; sourceTree = "<group>"; };
 		4ACAC5B91ADB11A5006F224A /* ChemicalModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChemicalModel.swift; path = ../ChemicalModel.swift; sourceTree = "<group>"; };
 		4ACAC5BA1ADB11A5006F224A /* EquipmentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EquipmentModel.swift; path = ../EquipmentModel.swift; sourceTree = "<group>"; };
 		4ACAC5BB1ADB11A5006F224A /* InventoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InventoryModel.swift; path = ../InventoryModel.swift; sourceTree = "<group>"; };
@@ -120,7 +117,6 @@
 				0FE287D41ACB3A0D0055044F /* DetailViewController.swift */,
 				0FE287F21ACB43720055044F /* LoginViewController.swift */,
 				0FE48CE41ACE16CF0050F0EC /* CatalogViewController.swift */,
-				0FE48CE61ACE1AC70050F0EC /* CatalogDetailViewController.swift */,
 				CEC6A9FB1ADF305000D5C15D /* sharedInventoryModel.swift */,
 				0FE287D61ACB3A0D0055044F /* Main.storyboard */,
 				0FE287D91ACB3A0D0055044F /* logo.xcassets */,
@@ -265,7 +261,6 @@
 				0FE287F31ACB43720055044F /* LoginViewController.swift in Sources */,
 				0FE287D51ACB3A0D0055044F /* DetailViewController.swift in Sources */,
 				4ACAC5C01ADB11A5006F224A /* LabMaterialModel.swift in Sources */,
-				0FE48CE71ACE1AC70050F0EC /* CatalogDetailViewController.swift in Sources */,
 				CEC6A9FC1ADF305000D5C15D /* sharedInventoryModel.swift in Sources */,
 				4ACAC5BD1ADB11A5006F224A /* ChemicalModel.swift in Sources */,
 				0FE287D31ACB3A0D0055044F /* MasterViewController.swift in Sources */,
@@ -280,7 +275,6 @@
 			files = (
 				4AB38CC31AE6FDEB00A0DD11 /* AppDelegate.swift in Sources */,
 				4AB38CBF1AE6FDDF00A0DD11 /* CatalogViewController.swift in Sources */,
-				4AB38CBE1AE6FDDC00A0DD11 /* CatalogDetailViewController.swift in Sources */,
 				4AB38CC61AE6FDF400A0DD11 /* EquipmentModel.swift in Sources */,
 				4AB38CC41AE6FDEE00A0DD11 /* LabMaterialModel.swift in Sources */,
 				0FE287E91ACB3A0D0055044F /* chemCatTests.swift in Sources */,
