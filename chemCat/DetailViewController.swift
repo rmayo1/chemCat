@@ -8,8 +8,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
-    
+class DetailViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var theInventoryModel: sharedInventoryModel = sharedInventoryModel.theSharedInventoryModel
     let simpleTableIdentifier = "SimpleTableIdentifier"
     var displayList = []
@@ -40,6 +39,7 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         if (theInventoryModel.mode == "Equipment"){
             displayList = theInventoryModel.equipmentList
+            
         }
         if (theInventoryModel.mode == "Chemicals"){
             displayList = theInventoryModel.chemicalList
@@ -59,18 +59,19 @@ class DetailViewController: UIViewController {
         var cell = tableView.dequeueReusableCellWithIdentifier(simpleTableIdentifier) as? UITableViewCell
         if (cell == nil){
             cell = UITableViewCell(style:UITableViewCellStyle.Default, reuseIdentifier:simpleTableIdentifier)
-            cell!.textLabel?.text = "things"
+            cell!.textLabel?.text = displayList[indexPath.row].displayName
         }
         //        let image = UIImage(named: "star")
         //        cell!.imageView?.image = image
         //        let highlightedImage = UIImage(named: "star")
         //        cell!.imageView?.image = highlightedImage
         
-        //cell?.textLabel?.text = string(displayList[indexPath.row])
+        cell?.textLabel?.text = displayList[indexPath.row] as NSString
         cell?.textLabel?.font = UIFont.boldSystemFontOfSize(10)
         
         return cell!
     }
+
 
 
     override func didReceiveMemoryWarning() {
