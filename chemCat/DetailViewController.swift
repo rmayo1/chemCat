@@ -70,7 +70,6 @@ class DetailViewController: UIViewController {
         var cell = tableView.dequeueReusableCellWithIdentifier(simpleTableIdentifier) as? UITableViewCell
         if (cell == nil){
             cell = UITableViewCell(style:UITableViewCellStyle.Default, reuseIdentifier:simpleTableIdentifier)
-            cell!.textLabel?.text = "things"
         }
         //        let image = UIImage(named: "star")
         //        cell!.imageView?.image = image
@@ -78,6 +77,7 @@ class DetailViewController: UIViewController {
         //        cell!.imageView?.image = highlightedImage
         
         //cell?.textLabel?.text = string(displayList[indexPath.row])
+        cell?.textLabel?.text = String((displayList[indexPath.row] as! Chemical).name)
         cell?.textLabel?.font = UIFont.boldSystemFontOfSize(10)
         
         return cell!
