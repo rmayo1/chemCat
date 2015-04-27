@@ -210,12 +210,6 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5j6-2d-MVq">
-                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="Add a Chemical" id="WDW-ny-mex"/>
-                                </items>
-                            </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q61-d4-FA2">
                                 <rect key="frame" x="33" y="219" width="70" height="21"/>
                                 <constraints>
@@ -306,6 +300,18 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5j6-2d-MVq">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <items>
+                                    <navigationItem title="Add a Chemical" id="WDW-ny-mex">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="wzL-K0-1z1">
+                                            <connections>
+                                                <action selector="backBarButtonPress:" destination="3B3-jb-zX8" id="mr6-rQ-9Na"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -315,7 +321,8 @@
                             <constraint firstItem="PS7-Ft-OIM" firstAttribute="top" secondItem="vaj-XR-AfW" secondAttribute="bottom" constant="2" id="5JT-91-XsR"/>
                             <constraint firstItem="7zf-G8-Vjk" firstAttribute="trailing" secondItem="tjs-h6-XSg" secondAttribute="trailing" id="7nj-kX-d7b"/>
                             <constraint firstItem="vaj-XR-AfW" firstAttribute="trailing" secondItem="GWr-XJ-qEJ" secondAttribute="trailing" id="9Fo-Ra-ij3"/>
-                            <constraint firstItem="0gp-xZ-Gen" firstAttribute="top" secondItem="5j6-2d-MVq" secondAttribute="bottom" constant="75" id="DWP-Ak-53i"/>
+                            <constraint firstItem="5j6-2d-MVq" firstAttribute="top" secondItem="0Ez-yh-Mtu" secondAttribute="bottom" constant="8" id="B50-Eo-pJk"/>
+                            <constraint firstItem="5j6-2d-MVq" firstAttribute="centerX" secondItem="L8m-EW-i90" secondAttribute="centerX" id="CFS-yC-tM4"/>
                             <constraint firstItem="Pdp-2x-8Rh" firstAttribute="baseline" secondItem="tjs-h6-XSg" secondAttribute="baseline" id="Dp9-4s-QDX"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0gp-xZ-Gen" secondAttribute="trailing" constant="36" id="E9C-aO-v3c"/>
                             <constraint firstItem="PS7-Ft-OIM" firstAttribute="leading" secondItem="vaj-XR-AfW" secondAttribute="leading" id="ESB-z6-fVo"/>
@@ -323,15 +330,14 @@
                             <constraint firstItem="L8m-EW-i90" firstAttribute="centerX" secondItem="u9A-aE-DyB" secondAttribute="centerX" id="K5B-q9-6Hz"/>
                             <constraint firstItem="3nd-Nv-yPW" firstAttribute="leading" secondItem="Pdp-2x-8Rh" secondAttribute="leading" id="PoP-as-Eb2"/>
                             <constraint firstItem="tjs-h6-XSg" firstAttribute="top" secondItem="7zf-G8-Vjk" secondAttribute="bottom" constant="4" id="Tdk-nW-ARM"/>
+                            <constraint firstItem="5j6-2d-MVq" firstAttribute="leading" secondItem="u9A-aE-DyB" secondAttribute="leading" id="UkZ-3s-jJf"/>
                             <constraint firstItem="vaj-XR-AfW" firstAttribute="top" secondItem="GWr-XJ-qEJ" secondAttribute="bottom" constant="4" id="cDJ-g2-G2S"/>
                             <constraint firstItem="wZq-XO-3rb" firstAttribute="top" secondItem="Q61-d4-FA2" secondAttribute="bottom" constant="10" id="e4d-UI-g5v"/>
                             <constraint firstItem="0gp-xZ-Gen" firstAttribute="leading" secondItem="GWr-XJ-qEJ" secondAttribute="leading" id="gAQ-I5-xuz"/>
                             <constraint firstItem="GWr-XJ-qEJ" firstAttribute="trailing" secondItem="0gp-xZ-Gen" secondAttribute="trailing" id="iKE-7k-Igo"/>
                             <constraint firstItem="3nd-Nv-yPW" firstAttribute="leading" secondItem="wZq-XO-3rb" secondAttribute="leading" id="jNq-8b-8Tq"/>
-                            <constraint firstItem="L8m-EW-i90" firstAttribute="centerX" secondItem="5j6-2d-MVq" secondAttribute="centerX" id="jmo-pC-8El"/>
                             <constraint firstItem="PS7-Ft-OIM" firstAttribute="baseline" secondItem="wZq-XO-3rb" secondAttribute="firstBaseline" id="mRG-7V-wHG"/>
                             <constraint firstItem="Q61-d4-FA2" firstAttribute="top" secondItem="rsG-rX-30J" secondAttribute="bottom" constant="13" id="oKE-mc-GXY"/>
-                            <constraint firstItem="dOr-EJ-Q0b" firstAttribute="top" secondItem="5j6-2d-MVq" secondAttribute="bottom" constant="79" id="oSy-Ii-Dh2"/>
                             <constraint firstItem="dOr-EJ-Q0b" firstAttribute="leading" secondItem="rsG-rX-30J" secondAttribute="leading" id="obV-G4-oqH"/>
                             <constraint firstItem="GWr-XJ-qEJ" firstAttribute="top" secondItem="0gp-xZ-Gen" secondAttribute="bottom" constant="4" id="qFB-P4-cTR"/>
                             <constraint firstItem="PS7-Ft-OIM" firstAttribute="trailing" secondItem="7zf-G8-Vjk" secondAttribute="trailing" id="rW8-wy-IOm"/>
@@ -413,11 +419,6 @@
                                     <navigationItem title="CheckOut" id="Q5B-Zj-Vc5">
                                         <barButtonItem key="backBarButtonItem" title="Test" id="FQD-7G-eho"/>
                                         <barButtonItem key="leftBarButtonItem" title="Back" id="8oH-HA-O3z"/>
-                                        <barButtonItem key="rightBarButtonItem" title="Next" id="lon-US-L6C">
-                                            <connections>
-                                                <action selector="nextUIBarButton:" destination="XF8-5y-HDp" id="bfS-Go-yX6"/>
-                                            </connections>
-                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -437,7 +438,6 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="600"/>
                     <connections>
-                        <outlet property="nextUIBarButton" destination="lon-US-L6C" id="e0g-rx-dJI"/>
                         <segue destination="2qW-aX-GbH" kind="show" identifier="Chemicals" id="xF4-oo-q8V"/>
                         <segue destination="lkm-Js-XQu" kind="show" identifier="Equipment" id="tEC-rq-fdO"/>
                     </connections>

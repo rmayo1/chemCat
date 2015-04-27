@@ -9,6 +9,9 @@
 import UIKit
 
 class addChemicalViewController: UIViewController {
+    @IBAction func backBarButtonPress(sender: UIBarButtonItem) {
+        performSegueWithIdentifier("backToChemicals", sender: self)
+    }
     @IBOutlet weak var chemNameField: UITextField!
     @IBOutlet weak var chemNameLabel: UILabel!
     @IBOutlet weak var chemUnitField: UITextField!
@@ -50,12 +53,14 @@ class addChemicalViewController: UIViewController {
             
             let newChem = Chemical(barcode: barCode, name: name, stock: stock!, userNames: [], expDate: exp, units: unit, ehs: ehs)
             theInventoryModel.addChemical(newChem)
-            /*
-            let alertController = UIAlertController(title: name+" added.", message:
+            /*let alertController = UIAlertController(title: name+" added.", message:
                 "The chemical has been added. You will be taken back to to the list of chemicals now.", preferredStyle: UIAlertControllerStyle.Alert)
             alertController.addAction(UIAlertAction(title: "Thank you,", style: UIAlertActionStyle.Default,handler: nil))
-            self.presentViewController(alertController, animated: true, completion: nil)*/
+            self.presentViewController(alertController, animated: true, completion: nil)
+            */
             performSegueWithIdentifier("backToChemicals", sender: self)
+            
+            
         }
         
     }

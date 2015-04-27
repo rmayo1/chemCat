@@ -17,7 +17,9 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var addItemUIBarButton: UIBarButtonItem!
     @IBOutlet weak var prevUIBarButton: UIBarButtonItem!
     @IBAction func addItemUIBarButtonOnPress(sender: UIBarButtonItem) {
-        performSegueWithIdentifier("addChemicals", sender: sender)
+        if theInventoryModel.admin == true {
+            performSegueWithIdentifier("addChemicals", sender: sender)
+        }
     }
     
     @IBAction func prevUIBarButtonPress(sender: UIBarButtonItem) {
@@ -48,6 +50,10 @@ class DetailViewController: UIViewController {
         }
         if (theInventoryModel.mode == "Chemicals"){
             displayList = theInventoryModel.chemicalList
+        }
+        if theInventoryModel.admin == false {
+            addItemUIBarButton.title = "[not an admin]"
+            addItemUIBarButton.tintColor = UIColor.redColor()
         }
         println(theInventoryModel.mode)
         println(displayList.count)
