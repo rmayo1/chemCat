@@ -23,6 +23,7 @@ class sharedInventoryModel {
     var equipmentList: [Equipment]//master list of playlists
     var outItemsList: [LabMaterial]//master list of albums
     var mode:String
+    var admin:Bool
     
     
     // sharedSongModel Constructor
@@ -30,6 +31,7 @@ class sharedInventoryModel {
     // Last Modified: 3/1/15]
     // Purpose: Initializes instance reference of sharedSongModel
     init(){
+        admin=false
         mode=""
         equipmentList = [Equipment]()//view controlers will reference this same instance for albumList
         outItemsList = [LabMaterial]()//view controllers will reference this same instace for playlistList

@@ -14,7 +14,12 @@ class DetailViewController: UIViewController {
     let simpleTableIdentifier = "SimpleTableIdentifier"
     var displayList = []
     
+    @IBOutlet weak var addItemUIBarButton: UIBarButtonItem!
     @IBOutlet weak var prevUIBarButton: UIBarButtonItem!
+    @IBAction func addItemUIBarButtonOnPress(sender: UIBarButtonItem) {
+        performSegueWithIdentifier("addChemicals", sender: sender)
+    }
+    
     @IBAction func prevUIBarButtonPress(sender: UIBarButtonItem) {
         
         performSegueWithIdentifier("backToCategories", sender: sender)

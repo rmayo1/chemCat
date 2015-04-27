@@ -31,6 +31,8 @@
 		4AB38CCA1AE6FE0900A0DD11 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0FE287DB1ACB3A0D0055044F /* LaunchScreen.xib */; };
 		4AC6B52E1AEDB83E0026A2AF /* detailEquipmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC6B52D1AEDB83D0026A2AF /* detailEquipmentView.swift */; };
 		4AC6B52F1AEDB83E0026A2AF /* detailEquipmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC6B52D1AEDB83D0026A2AF /* detailEquipmentView.swift */; };
+		4AC6B5311AEDBF620026A2AF /* addChemicalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC6B5301AEDBF620026A2AF /* addChemicalViewController.swift */; };
+		4AC6B5321AEDBF620026A2AF /* addChemicalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AC6B5301AEDBF620026A2AF /* addChemicalViewController.swift */; };
 		4ACAC5BD1ADB11A5006F224A /* ChemicalModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACAC5B91ADB11A5006F224A /* ChemicalModel.swift */; };
 		4ACAC5BE1ADB11A5006F224A /* EquipmentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACAC5BA1ADB11A5006F224A /* EquipmentModel.swift */; };
 		4ACAC5BF1ADB11A5006F224A /* InventoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ACAC5BB1ADB11A5006F224A /* InventoryModel.swift */; };
@@ -64,6 +66,7 @@
 		0FE287F21ACB43720055044F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0FE48CE41ACE16CF0050F0EC /* CatalogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
 		4AC6B52D1AEDB83D0026A2AF /* detailEquipmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailEquipmentView.swift; sourceTree = "<group>"; };
+		4AC6B5301AEDBF620026A2AF /* addChemicalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addChemicalViewController.swift; sourceTree = "<group>"; };
 		4ACAC5B91ADB11A5006F224A /* ChemicalModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChemicalModel.swift; path = ../ChemicalModel.swift; sourceTree = "<group>"; };
 		4ACAC5BA1ADB11A5006F224A /* EquipmentModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EquipmentModel.swift; path = ../EquipmentModel.swift; sourceTree = "<group>"; };
 		4ACAC5BB1ADB11A5006F224A /* InventoryModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = InventoryModel.swift; path = ../InventoryModel.swift; sourceTree = "<group>"; };
@@ -122,6 +125,7 @@
 				0FE48CE41ACE16CF0050F0EC /* CatalogViewController.swift */,
 				CEC6A9FB1ADF305000D5C15D /* sharedInventoryModel.swift */,
 				0FE287D61ACB3A0D0055044F /* Main.storyboard */,
+				4AC6B5301AEDBF620026A2AF /* addChemicalViewController.swift */,
 				4AC6B52D1AEDB83D0026A2AF /* detailEquipmentView.swift */,
 				0FE287D91ACB3A0D0055044F /* logo.xcassets */,
 				0FE287DB1ACB3A0D0055044F /* LaunchScreen.xib */,
@@ -268,6 +272,7 @@
 				4ACAC5C01ADB11A5006F224A /* LabMaterialModel.swift in Sources */,
 				CEC6A9FC1ADF305000D5C15D /* sharedInventoryModel.swift in Sources */,
 				4ACAC5BD1ADB11A5006F224A /* ChemicalModel.swift in Sources */,
+				4AC6B5311AEDBF620026A2AF /* addChemicalViewController.swift in Sources */,
 				0FE287D31ACB3A0D0055044F /* MasterViewController.swift in Sources */,
 				4ACAC5BF1ADB11A5006F224A /* InventoryModel.swift in Sources */,
 				0FE287D11ACB3A0D0055044F /* AppDelegate.swift in Sources */,
@@ -284,6 +289,7 @@
 				4AB38CC41AE6FDEE00A0DD11 /* LabMaterialModel.swift in Sources */,
 				0FE287E91ACB3A0D0055044F /* chemCatTests.swift in Sources */,
 				4AB38CC11AE6FDE500A0DD11 /* DetailViewController.swift in Sources */,
+				4AC6B5321AEDBF620026A2AF /* addChemicalViewController.swift in Sources */,
 				4AB38CC01AE6FDE300A0DD11 /* LoginViewController.swift in Sources */,
 				4AB38CC21AE6FDE800A0DD11 /* MasterViewController.swift in Sources */,
 				4AB38CC71AE6FDF600A0DD11 /* ChemicalModel.swift in Sources */,

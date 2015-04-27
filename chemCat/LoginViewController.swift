@@ -15,16 +15,20 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var pword_field: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var desc_field: UITextView!
+    var theInventoryModel: sharedInventoryModel = sharedInventoryModel.theSharedInventoryModel
+    
     
     @IBAction func loginButtonClick(sender: AnyObject) {
         let uname = String(uname_field.text as NSString)
         let pword = String(pword_field.text as NSString)
         //
-        // if uname == "Joe" && pword == "Awesome"{
-        self.performSegueWithIdentifier("successful_login", sender: self)
-        // }else{
-        //    desc_field.text = "Failure"
-        //}
+        if uname == "" && pword == ""{
+            theInventoryModel.admin=true
+            self.performSegueWithIdentifier("successful_login", sender: self)
+        }else{
+            self.performSegueWithIdentifier("successful_login", sender: self)
+            
+        }
     }
     
     override func viewDidLoad() {
