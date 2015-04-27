@@ -155,7 +155,7 @@ class chemCatTests: XCTestCase {
         myInventory.addChemical(myChemical)
         myInventory.addEquipment(myEquipment)
         
-        /*XCTAssertEqual(myInventory.getChemical(myChemical), true, "Chemical was not added")
+        XCTAssertEqual(myInventory.getChemical(myChemical), true, "Chemical was not added")
         XCTAssertEqual(myInventory.getEquipment(myEquipment), true, "Equipment was not added")
         
         myInventory.checkOutChem(myChemical)
@@ -170,7 +170,7 @@ class chemCatTests: XCTestCase {
         myInventory.removeEq(myEquipment)
         
         XCTAssertEqual(myInventory.getChemical(myChemical), false, "Chemical was not removed")
-        XCTAssertEqual(myInventory.getEquipment(myEquipment), false, "Equipment was not removed")*/
+        XCTAssertEqual(myInventory.getEquipment(myEquipment), false, "Equipment was not removed")
     }
     
 }

@@ -108,6 +108,33 @@ class sharedInventoryModel {
         equipmentList.append(outItem)
     }
     
+    func getChemical(chem: Chemical) -> Bool{
+        for Chemical in chemicalList {
+            if Chemical.getName() == chem.getName() {
+                return true
+            }
+        }
+        return false
+    }
+    
+    func getEquipment(eq: Equipment) -> Bool {
+        for Equipment in equipmentList {
+            if Equipment.getName() == eq.getName() {
+                return true
+            }
+        }
+        return false
+    }
+    
+    func getOutItem(out: LabMaterial) -> Bool {
+        for LabMaterial in outItemsList {
+            if LabMaterial.getName() == out.getName() {
+                return true
+            }
+        }
+        return false
+    }
+    
     func orderItem(emptyItem: LabMaterial) -> String{
         //code to open up vendor's order form in browser
         //openURL(NSURL(string: "http://www.google.com"))
