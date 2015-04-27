@@ -361,6 +361,7 @@
                         <outlet property="chemQuantityLabel" destination="Q61-d4-FA2" id="lMf-N2-Dhe"/>
                         <outlet property="chemUnitField" destination="GWr-XJ-qEJ" id="XHE-FF-8bm"/>
                         <outlet property="chemUnitLabel" destination="rsG-rX-30J" id="EkZ-tc-BEQ"/>
+                        <segue destination="2qW-aX-GbH" kind="show" identifier="backToChemicals" id="n6C-jj-J1p"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aSe-KT-VMT" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -469,6 +470,7 @@
         <image name="logo" width="406" height="396"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="n6C-jj-J1p"/>
         <segue reference="vG9-hR-m3R"/>
     </inferredMetricsTieBreakers>
 </document>

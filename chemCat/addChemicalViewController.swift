@@ -35,6 +35,29 @@ class addChemicalViewController: UIViewController {
     }
     @IBAction func addChemicalOnClick(sender: AnyObject) {
         var valid = checkInfo()
+        if valid == true {
+            var ehs=true
+            if chemEHSSegment.selectedSegmentIndex==1{
+               ehs = false
+            } else {
+                ehs = true
+            }
+            let barCode = chemBarCodeField.text.toInt()!
+            let name = chemNameField.text
+            let stock = chemQuantityField.text.toInt()
+            let exp = chemExpirationField.text.toInt()!
+            let unit = chemUnitField.text
+            
+            let newChem = Chemical(barcode: barCode, name: name, stock: stock!, userNames: [], expDate: exp, units: unit, ehs: ehs)
+            theInventoryModel.addChemical(newChem)
+            /*
+            let alertController = UIAlertController(title: name+" added.", message:
+                "The chemical has been added. You will be taken back to to the list of chemicals now.", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Thank you,", style: UIAlertActionStyle.Default,handler: nil))
+            self.presentViewController(alertController, animated: true, completion: nil)*/
+            performSegueWithIdentifier("backToChemicals", sender: self)
+        }
+        
     }
     
     func checkInfo()->Bool{
@@ -51,22 +74,45 @@ class addChemicalViewController: UIViewController {
         } else {
             chemUnitLabel.textColor = UIColor.blackColor()
         }
+        
         if (chemQuantityField.text==""){
             valid = false
             chemQuantityLabel.textColor = UIColor.redColor()
+        } else if(chemQuantityField.text.toInt() == nil){
+            chemQuantityLabel.textColor = UIColor.redColor()
+            valid = false
+        } else if(chemQuantityField.text.toInt() < 0){
+            chemQuantityLabel.textColor = UIColor.redColor()
+            valid = false
         } else {
-            var quant = chemQuantityField.text.toInt()
-            if (quant<0){
-                chemQuantityLabel.textColor = UIColor.redColor()
-            } else {
                 chemQuantityLabel.textColor = UIColor.blackColor()
+        }
+        
+        if (chemExpirationField.text==""){
+            chemExpirationLabel.textColor = UIColor.redColor()
+        } else if ((chemExpirationField.text.toInt()) == nil){
+            valid = false
+            chemExpirationLabel.textColor = UIColor.redColor()
+        } else {
+            chemExpirationLabel.textColor = UIColor.blackColor()
+        }
+    
+        if (chemBarCodeField.text==""){
+            valid = false
+            chemBarCodeLabel.textColor = UIColor.redColor()
+        } else if(chemBarCodeField.text.toInt() == nil){
+            chemBarCodeLabel.textColor = UIColor.redColor()
+            valid = false
+        } else {
+            chemBarCodeLabel.textColor = UIColor.blackColor()
+            for i in 1...theInventoryModel.chemicalList.count{
+                if theInventoryModel.chemicalList[i-1].barcode == (chemBarCodeField.text.toInt()!+10000000){
+                    chemBarCodeLabel.textColor = UIColor.redColor()
+                    valid = false
+                    println("Barcode in System already. Enter another.")
+                }
             }
         }
-        /*if (ehs==true || ehs==false){
-            chemEHSLabel.textColor = UIColor.redColor()
-        } else {
-            chemEHSLabel.textColor = UIColor.blackColor()
-        }*/
         return valid
     }
     var theInventoryModel: sharedInventoryModel = sharedInventoryModel.theSharedInventoryModel
