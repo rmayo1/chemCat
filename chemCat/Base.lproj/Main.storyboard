@@ -180,10 +180,10 @@
             </objects>
             <point key="canvasLocation" x="2979" y="-388"/>
         </scene>
-        <!--Detail Equipment View-->
+        <!--Detail Equipment Controller-->
         <scene sceneID="ZKD-RG-SSk">
             <objects>
-                <viewController id="lkm-Js-XQu" customClass="detailEquipmentView" customModule="chemCat" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="lkm-Js-XQu" customClass="detailEquipmentController" customModule="chemCat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8Ij-vL-3OJ"/>
                         <viewControllerLayoutGuide type="bottom" id="8od-aX-54T"/>
