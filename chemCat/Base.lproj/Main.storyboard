@@ -180,6 +180,25 @@
             </objects>
             <point key="canvasLocation" x="2979" y="-388"/>
         </scene>
+        <!--Detail Equipment View-->
+        <scene sceneID="ZKD-RG-SSk">
+            <objects>
+                <viewController id="lkm-Js-XQu" customClass="detailEquipmentView" customModule="chemCat" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8Ij-vL-3OJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="8od-aX-54T"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="sTt-es-aMc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yaD-dW-uho"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="epb-VG-Ofd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2940" y="347"/>
+        </scene>
         <!--Check Inventory-->
         <scene sceneID="8c8-mb-tXL">
             <objects>
@@ -231,7 +250,8 @@
                     <size key="freeformSize" width="600" height="600"/>
                     <connections>
                         <outlet property="nextUIBarButton" destination="lon-US-L6C" id="e0g-rx-dJI"/>
-                        <segue destination="2qW-aX-GbH" kind="show" identifier="toItems" id="xF4-oo-q8V"/>
+                        <segue destination="2qW-aX-GbH" kind="show" identifier="Chemicals" id="xF4-oo-q8V"/>
+                        <segue destination="lkm-Js-XQu" kind="show" identifier="Equipment" id="tEC-rq-fdO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a5E-Vq-zYE" userLabel="First Responder" sceneMemberID="firstResponder"/>

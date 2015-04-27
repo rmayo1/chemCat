@@ -13,7 +13,7 @@ class CatalogViewController: UIViewController, UITableViewDataSource, UITableVie
     @IBOutlet weak var nextUIBarButton: UIBarButtonItem!
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         theInventoryModel.mode = categories[indexPath.row]
-        performSegueWithIdentifier("toItems", sender: self)
+        performSegueWithIdentifier(theInventoryModel.mode, sender: self)
     }
     
     
