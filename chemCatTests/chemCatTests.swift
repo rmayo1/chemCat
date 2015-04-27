@@ -133,4 +133,44 @@ class chemCatTests: XCTestCase {
         
     }
     
+    func testSharedInventory() {
+        
+        var myInventory = sharedInventoryModel()
+        
+        XCTAssertNotNil(myInventory, "Inventory was created successfully")
+        
+        var name = "hydrochloric acid"
+        var barcode = 123
+        var stock = 50
+        var units = "ml"
+        var expDate = 2016
+        var ehs = true
+        var condition = "New"
+        var breakable = true
+        
+        var myChemical = Chemical(barcode: barcode, name: name, stock: stock, userNames: [], expDate: expDate, units: units, ehs: ehs)
+        
+        var myEquipment = Equipment(barcode: barcode, name: name, stock: stock, userNames: [], condition: condition, breakable: breakable)
+        
+        myInventory.addChemical(myChemical)
+        myInventory.addEquipment(myEquipment)
+        
+        /*XCTAssertEqual(myInventory.getChemical(myChemical), true, "Chemical was not added")
+        XCTAssertEqual(myInventory.getEquipment(myEquipment), true, "Equipment was not added")
+        
+        myInventory.checkOutChem(myChemical)
+        XCTAssertEqual(myInventory.getOutItem(myChemical), true, "Chemical was not checked out")
+        myInventory.checkInChem(myChemical)
+        
+        myInventory.checkOutEq(myEquipment)
+        XCTAssertEqual(myInventory.getOutItem(myEquipment), true, "Equipment was not checked out")
+        myInventory.checkInEq(myEquipment)
+        
+        myInventory.removeChem(myChemical)
+        myInventory.removeEq(myEquipment)
+        
+        XCTAssertEqual(myInventory.getChemical(myChemical), false, "Chemical was not removed")
+        XCTAssertEqual(myInventory.getEquipment(myEquipment), false, "Equipment was not removed")*/
+    }
+    
 }
