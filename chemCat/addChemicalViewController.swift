@@ -62,12 +62,11 @@ class addChemicalViewController: UIViewController {
                 chemQuantityLabel.textColor = UIColor.blackColor()
             }
         }
-        if (ehs==true || ehs==false){
+        /*if (ehs==true || ehs==false){
             chemEHSLabel.textColor = UIColor.redColor()
         } else {
             chemEHSLabel.textColor = UIColor.blackColor()
-        }
-        
+        }*/
         return valid
     }
     var theInventoryModel: sharedInventoryModel = sharedInventoryModel.theSharedInventoryModel
