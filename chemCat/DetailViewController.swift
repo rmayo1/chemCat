@@ -77,7 +77,7 @@ class DetailViewController: UIViewController {
         //        cell!.imageView?.image = highlightedImage
         
         //cell?.textLabel?.text = string(displayList[indexPath.row])
-        cell?.textLabel?.text = String((displayList[indexPath.row] as! Chemical).name)
+        cell?.textLabel?.text = String((displayList[indexPath.row] as Chemical).name)
         cell?.textLabel?.font = UIFont.boldSystemFontOfSize(10)
         
         return cell!
