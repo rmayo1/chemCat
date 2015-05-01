@@ -16,6 +16,7 @@
 		0FE287E91ACB3A0D0055044F /* chemCatTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE287E81ACB3A0D0055044F /* chemCatTests.swift */; };
 		0FE287F31ACB43720055044F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE287F21ACB43720055044F /* LoginViewController.swift */; };
 		0FE48CE51ACE16CF0050F0EC /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE48CE41ACE16CF0050F0EC /* CatalogViewController.swift */; };
+		17E022161AF3F74C00226064 /* addEquipmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17E022151AF3F74C00226064 /* addEquipmentViewController.swift */; };
 		4AB38CBD1AE6FDD700A0DD11 /* sharedInventoryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC6A9FB1ADF305000D5C15D /* sharedInventoryModel.swift */; };
 		4AB38CBF1AE6FDDF00A0DD11 /* CatalogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE48CE41ACE16CF0050F0EC /* CatalogViewController.swift */; };
 		4AB38CC01AE6FDE300A0DD11 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE287F21ACB43720055044F /* LoginViewController.swift */; };
@@ -65,6 +66,7 @@
 		0FE287E81ACB3A0D0055044F /* chemCatTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = chemCatTests.swift; sourceTree = "<group>"; };
 		0FE287F21ACB43720055044F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		0FE48CE41ACE16CF0050F0EC /* CatalogViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatalogViewController.swift; sourceTree = "<group>"; };
+		17E022151AF3F74C00226064 /* addEquipmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addEquipmentViewController.swift; sourceTree = "<group>"; };
 		4AC6B52D1AEDB83D0026A2AF /* detailEquipmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = detailEquipmentView.swift; sourceTree = "<group>"; };
 		4AC6B5301AEDBF620026A2AF /* addChemicalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = addChemicalViewController.swift; sourceTree = "<group>"; };
 		4ACAC5B91ADB11A5006F224A /* ChemicalModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChemicalModel.swift; path = ../ChemicalModel.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				0FE48CE41ACE16CF0050F0EC /* CatalogViewController.swift */,
 				CEC6A9FB1ADF305000D5C15D /* sharedInventoryModel.swift */,
 				0FE287D61ACB3A0D0055044F /* Main.storyboard */,
+				17E022151AF3F74C00226064 /* addEquipmentViewController.swift */,
 				4AC6B5301AEDBF620026A2AF /* addChemicalViewController.swift */,
 				4AC6B52D1AEDB83D0026A2AF /* detailEquipmentView.swift */,
 				0FE287D91ACB3A0D0055044F /* logo.xcassets */,
@@ -268,6 +271,7 @@
 				0FE48CE51ACE16CF0050F0EC /* CatalogViewController.swift in Sources */,
 				4AC6B52E1AEDB83E0026A2AF /* detailEquipmentView.swift in Sources */,
 				0FE287F31ACB43720055044F /* LoginViewController.swift in Sources */,
+				17E022161AF3F74C00226064 /* addEquipmentViewController.swift in Sources */,
 				0FE287D51ACB3A0D0055044F /* DetailViewController.swift in Sources */,
 				4ACAC5C01ADB11A5006F224A /* LabMaterialModel.swift in Sources */,
 				CEC6A9FC1ADF305000D5C15D /* sharedInventoryModel.swift in Sources */,
