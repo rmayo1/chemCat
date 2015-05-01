@@ -14,11 +14,11 @@ class detailEquipmentController: UIViewController {
     let simpleTableIdentifier = "SimpleTableIdentifier"
     var displayList = []
     
-    @IBOutlet weak var prevUIBarButton: UIBarButtonItem!
-    @IBAction func prevUIBarButtonPress(sender: UIBarButtonItem) {
-        
-        performSegueWithIdentifier("backToCategories", sender: sender)
+    @IBAction func backButtonUIAction(sender: UIBarButtonItem) {
+        performSegueWithIdentifier("backToMain", sender: sender)
     }
+    
+
     @IBOutlet weak var detailDescriptionLabel: UILabel!
     
     var detailItem: AnyObject? {
