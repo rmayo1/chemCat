@@ -626,7 +626,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9Uz-xB-hy5">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9Uz-xB-hy5">
                                 <rect key="frame" x="16" y="70" width="568" height="481"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -784,9 +784,9 @@
         <image name="logo" width="406" height="396"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="tEC-rq-fdO"/>
-        <segue reference="vG9-hR-m3R"/>
+        <segue reference="pIC-3B-cLe"/>
+        <segue reference="5g4-BE-Oap"/>
+        <segue reference="zts-qf-TNx"/>
         <segue reference="xF4-oo-q8V"/>
-        <segue reference="P9v-R7-LnO"/>
     </inferredMetricsTieBreakers>
 </document>
