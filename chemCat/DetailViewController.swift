@@ -23,9 +23,9 @@ class DetailViewController: UIViewController {
     }
     
     @IBAction func prevUIBarButtonPress(sender: UIBarButtonItem) {
-        
         performSegueWithIdentifier("backToCategories", sender: sender)
     }
+    
     @IBOutlet weak var detailDescriptionLabel: UILabel!
 
     var detailItem: AnyObject? {
