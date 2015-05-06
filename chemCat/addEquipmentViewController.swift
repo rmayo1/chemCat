@@ -7,9 +7,21 @@
 //
 
 import UIKit
-
+/* class: addEquipmentViewController
+* Parameters: n/a
+* Output: n/a
+* Last Modified: 5/6/15
+* Author: Ali
+* Purpose: Holds and maintains functions and code for adding equipment
+*/
 class addEquipmentViewController: UIViewController {
-    
+    /* func: equipBreakableSegmentToggle
+    * Parameters: sender, change in value
+    * Output: n/a
+    * Last Modified: 5/6/15
+    * Author: Ali
+    * Purpose: changes value of breakable boolean depending on if selected or not
+    */
     @IBAction func equipBreakableSegmentToggle(sender: AnyObject) {
         if sender.selectedSegmentIndex == 0{
             var breakable = true
@@ -17,6 +29,7 @@ class addEquipmentViewController: UIViewController {
             var breakable = false
         }
     }
+    // sets up labels and fields for use in view
     @IBOutlet weak var equipBarcodeLabel: UILabel!
     @IBOutlet weak var equipBreakableLabel: UILabel!
     @IBOutlet weak var equipConditionLabel: UILabel!
@@ -27,8 +40,18 @@ class addEquipmentViewController: UIViewController {
     @IBOutlet weak var equipConditionField: UITextField!
     @IBOutlet weak var equipNameField: UITextField!
     @IBOutlet weak var equipStockField: UITextField!
+    
+    /* func: addEquipmentOnClick
+    * Parameters: sender, on click
+    * Output: n/a
+    * Last Modified: 5/6/15
+    * Author: Ali
+    * Purpose: adds the equipment to the sharedInventoryModel's equipment list.
+    */
     @IBAction func addEquipmentOnClick(sender: AnyObject) {
+        // checks if valid
         var valid = checkInfo()
+        //if valid, compiles info and adds to equipmentList
         if valid == true {
             var breakable = true
             if equipBreakableSegment.selectedSegmentIndex == 1{
@@ -55,22 +78,31 @@ class addEquipmentViewController: UIViewController {
         }
         
     }
-    
+    /* func: CheckInfo
+    * Parameters: N/A
+    * Output: boolean
+    * Last Modified: 5/6/15
+    * Author: Ali
+    * Purpose: checks if all info in fields are valid, returns true if so
+    */
     func checkInfo()->Bool{
+        // initializes validity as false
         var valid = true
+        // changes bool if field is empty
         if (equipNameField.text==""){
             valid = false
             equipNameLabel.textColor = UIColor.redColor()
         } else {
             equipNameLabel.textColor = UIColor.blackColor()
         }
+        // changes bool if field is empty
         if (equipStockField.text==""){
             valid = false
             equipStockLabel.textColor = UIColor.redColor()
         } else {
             equipStockLabel.textColor = UIColor.blackColor()
         }
-        
+        // changes bool if field is empty
         if (equipConditionField.text==""){
             valid = false
             equipConditionLabel.textColor = UIColor.redColor()
@@ -78,7 +110,7 @@ class addEquipmentViewController: UIViewController {
             equipConditionLabel.textColor = UIColor.blackColor()
         }
         
-        
+        // changes bool if field is empty, or if barcode is already taken
         if (equipBarcodeField.text==""){
             valid = false
             equipBarcodeLabel.textColor = UIColor.redColor()
@@ -88,7 +120,7 @@ class addEquipmentViewController: UIViewController {
         } else {
             equipBarcodeLabel.textColor = UIColor.blackColor()
             for i in 1...theInventoryModel.equipmentList.count{
-                if theInventoryModel.equipmentList[i-1].barcode == (equipBarcodeField.text.toInt()!+10000000){
+                if theInventoryModel.equipmentList[i-1].barcode == (equipBarcodeField.text.toInt()!+20000000){
                     equipBarcodeLabel.textColor = UIColor.redColor()
                     valid = false
                     println("Barcode in System already. Enter another.")
@@ -98,6 +130,7 @@ class addEquipmentViewController: UIViewController {
         return valid
     }
     
+    // creates instance of shared inventroy model for view for shared data
     var theInventoryModel: sharedInventoryModel = sharedInventoryModel.theSharedInventoryModel
     
     override func viewDidLoad() {

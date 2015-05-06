@@ -7,11 +7,25 @@
 //
 
 import UIKit
-
+/* class: addChemicalViewController
+* Parameters: n/a
+* Output: n/a
+* Last Modified: 5/6/15
+* Author: Rob
+* Purpose: maintains and holds code for adding chemicals page
+*/
 class addChemicalViewController: UIViewController {
+    /* func: backBarButtonPress
+    * Parameters: Sender, on button click
+    * Output: n/a
+    * Last Modified: 5/6/15
+    * Author: Rob
+    * Purpose: segues back to chemical page on press
+    */
     @IBAction func backBarButtonPress(sender: UIBarButtonItem) {
         performSegueWithIdentifier("backToChemicals", sender: self)
     }
+    // initialises labels, fields and items on view controller
     @IBOutlet weak var chemNameField: UITextField!
     @IBOutlet weak var chemNameLabel: UILabel!
     @IBOutlet weak var chemUnitField: UITextField!
@@ -29,6 +43,13 @@ class addChemicalViewController: UIViewController {
     @IBOutlet weak var chemBarCodeField: UITextField!
     @IBOutlet weak var chemBarCodeLabel: UILabel!
     
+    /* func: EHSSegmentToggle
+    * Parameters: sender, on switch
+    * Output: n/a
+    * Last Modified: 5/6/15
+    * Author: Rob
+    * Purpose: changes ehs boolean depending on what toggled value is
+    */
     @IBAction func EHSSegmentToggle(sender: UISegmentedControl) {
         if sender.selectedSegmentIndex==0{
             var ehs = true
@@ -36,8 +57,17 @@ class addChemicalViewController: UIViewController {
             var ehs = false
         }
     }
+    /* func: addChemicalOnClick
+    * Parameters: sender, on click
+    * Output: n/a
+    * Last Modified: 5/6/15
+    * Author: Rob
+    * Purpose: adds the chemical to the sharedInventoryModel's chemical list.
+    */
     @IBAction func addChemicalOnClick(sender: AnyObject) {
+        // checks validity of view controller's fields
         var valid = checkInfo()
+        // if info is valid, compiles info into chemical class and adds to shared singleton chemical list. Returns to previous page
         if valid == true {
             var ehs=true
             if chemEHSSegment.selectedSegmentIndex==1{
@@ -64,9 +94,17 @@ class addChemicalViewController: UIViewController {
         }
         
     }
-    
+    /* func: CheckInfo
+    * Parameters: N/A
+    * Output: boolean
+    * Last Modified: 5/6/15
+    * Author: Rob
+    * Purpose: checks if all info in fields are valid, returns true if so
+    */
     func checkInfo()->Bool{
+        // initializes validity boolean as true
         var valid = true
+        // sets bool as false if fields are empty...
         if (chemNameField.text==""){
             valid = false
             chemNameLabel.textColor = UIColor.redColor()
@@ -79,7 +117,7 @@ class addChemicalViewController: UIViewController {
         } else {
             chemUnitLabel.textColor = UIColor.blackColor()
         }
-        
+        // sets bool as false if quantity isn't a number/isn't above 0
         if (chemQuantityField.text==""){
             valid = false
             chemQuantityLabel.textColor = UIColor.redColor()
@@ -92,7 +130,7 @@ class addChemicalViewController: UIViewController {
         } else {
                 chemQuantityLabel.textColor = UIColor.blackColor()
         }
-        
+        // sets bool to false if year isnt an integer
         if (chemExpirationField.text==""){
             chemExpirationLabel.textColor = UIColor.redColor()
         } else if ((chemExpirationField.text.toInt()) == nil){
@@ -101,6 +139,7 @@ class addChemicalViewController: UIViewController {
         } else {
             chemExpirationLabel.textColor = UIColor.blackColor()
         }
+        //sets to false is four digit code isn't an int, or already added
     
         if (chemBarCodeField.text==""){
             valid = false
@@ -120,6 +159,7 @@ class addChemicalViewController: UIViewController {
         }
         return valid
     }
+    //initializes sharedInventory model for viewController
     var theInventoryModel: sharedInventoryModel = sharedInventoryModel.theSharedInventoryModel
     
     override func viewDidLoad() {

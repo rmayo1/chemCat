@@ -785,8 +785,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="pIC-3B-cLe"/>
-        <segue reference="5g4-BE-Oap"/>
         <segue reference="zts-qf-TNx"/>
+        <segue reference="5g4-BE-Oap"/>
         <segue reference="xF4-oo-q8V"/>
     </inferredMetricsTieBreakers>
 </document>
