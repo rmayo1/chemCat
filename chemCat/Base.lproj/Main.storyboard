@@ -693,7 +693,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3v6-in-8YI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="955" y="-1656"/>
+            <point key="canvasLocation" x="974" y="-1724"/>
         </scene>
         <!--Scan-->
         <scene sceneID="706-eK-MY1">
@@ -784,9 +784,9 @@
         <image name="logo" width="406" height="396"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="f7G-Wn-vTQ"/>
         <segue reference="tEC-rq-fdO"/>
+        <segue reference="vG9-hR-m3R"/>
         <segue reference="xF4-oo-q8V"/>
-        <segue reference="zts-qf-TNx"/>
+        <segue reference="P9v-R7-LnO"/>
     </inferredMetricsTieBreakers>
 </document>

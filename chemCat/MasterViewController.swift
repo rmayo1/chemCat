@@ -8,15 +8,35 @@
 
 import UIKit
 
+/* Class: MasterViewController
+* Parameters: N/A
+* Output: N/A
+* Last Modified: 5/6/15
+* Author: ???
+* Purpose: Hosts table view for inventory hub page and relative functions.
+*/
 class MasterViewController: UITableViewController {
-
+    // initializes array for use to determine size of table
     var objects = NSMutableArray()
 
-
+    /* Func: awakeFromNib
+    * Parameters: N/A
+    * Output: N/A
+    * Last Modified: 5/6/15
+    * Author: ???
+    * Purpose: initializes state information after objects have been loaded from an Interface Builder archive
+    */
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-
+    
+    /* Func: viewDidLoad()
+    * Parameters: N/A
+    * Output: N/A
+    * Last Modified: 5/6/15
+    * Author: ???
+    * Purpose: initialises information on page.
+    */
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -26,11 +46,19 @@ class MasterViewController: UITableViewController {
         self.navigationItem.rightBarButtonItem = addButton
     }
 
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    /* Func: insertNewObject
+    * Parameters: Sender
+    * Output: N/A
+    * Last Modified: 5/6/15
+    * Author: ???
+    * Purpose: Adds object at index within table. Updates table
+    */
     func insertNewObject(sender: AnyObject) {
         objects.insertObject(NSDate(), atIndex: 0)
         let indexPath = NSIndexPath(forRow: 0, inSection: 0)
@@ -38,7 +66,14 @@ class MasterViewController: UITableViewController {
     }
 
     // MARK: - Segues
-
+    
+    /* Func: prepareForSegue
+    * Parameters: segue, sender object
+    * Output: N/A
+    * Last Modified: 5/6/15
+    * Author: ???
+    * Purpose: Grabs information of selected item durng segue for loading detailView
+    */
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow() {
@@ -49,7 +84,9 @@ class MasterViewController: UITableViewController {
     }
 
     // MARK: - Table View
-
+    
+    // The following functions prepare the tableView, load its content.
+    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }

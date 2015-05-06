@@ -8,20 +8,45 @@
 
 import UIKit
 
+/* Class: DetailViewController
+* Parameters: N/A
+* Output: N/A
+* Last Modified: 5/6/15
+* Author: ???
+* Purpose: Shows and maintains content for chemical list
+*/
 class DetailViewController: UIViewController {
-    
+    // creates instance of singleton
     var theInventoryModel: sharedInventoryModel = sharedInventoryModel.theSharedInventoryModel
+    
+    // preps variables for table use
     let simpleTableIdentifier = "SimpleTableIdentifier"
     var displayList = []
     
+    // connects items in view to code
     @IBOutlet weak var addItemUIBarButton: UIBarButtonItem!
     @IBOutlet weak var prevUIBarButton: UIBarButtonItem!
+    
+    /* Func: addItemUIBarButtonOnPress
+    * Parameters: sender from barButtonItem
+    * Output: N/A
+    * Last Modified: 5/6/15
+    * Author: Rob
+    * Purpose: Performs segue to add chemicla page on press
+    */
     @IBAction func addItemUIBarButtonOnPress(sender: UIBarButtonItem) {
         if theInventoryModel.admin == true {
             performSegueWithIdentifier("addChemicals", sender: sender)
         }
     }
     
+    /* Func: prevUIBarButtonPress
+    * Parameters: sender from BarButtonItem
+    * Output: N/A
+    * Last Modified: 5/6/15
+    * Author: Rob
+    * Purpose: performs segue to previous page
+    */
     @IBAction func prevUIBarButtonPress(sender: UIBarButtonItem) {
         performSegueWithIdentifier("backToCategories", sender: sender)
     }
@@ -44,13 +69,16 @@ class DetailViewController: UIViewController {
         }
     }
     
+    /* Func: viewDidLoad()
+    * Parameters: N/A
+    * Output: N/A
+    * Last Modified: 5/6/15
+    * Author: Josh
+    * Purpose: initialises information on page.
+    */
     override func viewDidLoad() {
-        if (theInventoryModel.mode == "Equipment"){
-            displayList = theInventoryModel.equipmentList
-        }
-        if (theInventoryModel.mode == "Chemicals"){
-            displayList = theInventoryModel.chemicalList
-        }
+        
+        displayList = theInventoryModel.chemicalList
         if theInventoryModel.admin == false {
             addItemUIBarButton.title = "[not an admin]"
             addItemUIBarButton.tintColor = UIColor.redColor()
@@ -61,10 +89,18 @@ class DetailViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
     }
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    // THE FOLLOWING FUNCTIONS PREPARE THE TABLE VIEW
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return displayList.count
     }
+    
+    
     
     func tableView(tableView:UITableView, cellForRowAtIndexPath indexPath:NSIndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCellWithIdentifier(simpleTableIdentifier) as? UITableViewCell
@@ -84,11 +120,7 @@ class DetailViewController: UIViewController {
     }
 
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
+    
 
 }
 

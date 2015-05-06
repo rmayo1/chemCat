@@ -9,8 +9,15 @@
 import Foundation
 import UIKit
 
+/* Class: LoginViewController
+* Parameters: N/A
+* Output: N/A
+* Last Modified: 5/6/15
+* Author: Joe "The Real Deal" Delia
+* Purpose: Sets up and maintains content/functions for Login page
+*/
 class LoginViewController: UIViewController {
-    
+    // initialises cariables from the login view
     @IBOutlet weak var uname_field: UITextField!
     @IBOutlet weak var pword_field: UITextField!
     @IBOutlet weak var loginButton: UIButton!
