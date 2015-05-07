@@ -38,6 +38,7 @@ class detailEquipmentController: UIViewController {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        theInventoryModel.getCurrentEquipment(String((displayList[indexPath.row] as Equipment).name))
         performSegueWithIdentifier("ItemDetail", sender: self)
     }
     
@@ -73,7 +74,6 @@ class detailEquipmentController: UIViewController {
         //cell?.textLabel?.text = string(displayList[indexPath.row])
         cell?.textLabel?.text = String((displayList[indexPath.row] as Equipment).name)
         cell?.textLabel?.font = UIFont.boldSystemFontOfSize(10)
-        theInventoryModel.getCurrentEquipment(String((displayList[indexPath.row] as Equipment).name))
         
         return cell!
     }

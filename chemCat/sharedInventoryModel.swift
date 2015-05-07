@@ -60,9 +60,9 @@ class sharedInventoryModel {
     *Author: Josh
     */
     func getCurrentChemical(thingName:String){
-        for chemicals in chemicalList {
-            if chemicals.getName() == thingName {
-                currChemical = chemicals
+        for chemical in chemicalList {
+            if chemical.name == thingName {
+                currChemical = chemical
             }
         }
     }
@@ -71,9 +71,9 @@ class sharedInventoryModel {
     *Author: Josh
     */
     func getCurrentEquipment(thingName:String){
-        for equipments in equipmentList{
-            if equipments.getName() == thingName {
-                currEquipment = equipments
+        for equipment in equipmentList{
+            if equipment.name == thingName {
+                currEquipment = equipment
             }
         }
     }
