@@ -66,12 +66,6 @@ class detailEquipmentController: UIViewController {
             cell = UITableViewCell(style:UITableViewCellStyle.Default, reuseIdentifier:simpleTableIdentifier)
             cell!.textLabel?.text = "things"
         }
-        //        let image = UIImage(named: "star")
-        //        cell!.imageView?.image = image
-        //        let highlightedImage = UIImage(named: "star")
-        //        cell!.imageView?.image = highlightedImage
-        
-        //cell?.textLabel?.text = string(displayList[indexPath.row])
         cell?.textLabel?.text = String((displayList[indexPath.row] as Equipment).name)
         cell?.textLabel?.font = UIFont.boldSystemFontOfSize(10)
         

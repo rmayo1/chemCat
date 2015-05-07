@@ -38,8 +38,8 @@ class sharedInventoryModel {
     init(){
         admin=false
         mode=""
-        currChemical = Chemical(barcode: 00000000, name: "DefaultChemical", stock:1, userNames: [],expDate:3000,units:"ml",ehs:false)
-        currEquipment = Equipment(barcode:00000000,name: "DefaultEquipment", stock:1, userNames: [], condition:"nil", breakable:false)
+        currChemical = Chemical(barcode: 00000000, name: "", stock:1, userNames: [],expDate:3000,units:"ml",ehs:false)
+        currEquipment = Equipment(barcode:00000000,name: "", stock:1, userNames: [], condition:"nil", breakable:false)
         equipmentList = [Equipment]()
         outItemsList = [LabMaterial]()
         chemicalList = [Chemical]()

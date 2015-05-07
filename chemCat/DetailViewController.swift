@@ -100,8 +100,13 @@ class DetailViewController: UIViewController {
         return displayList.count
     }
     
+    /*func tableView
+    *Parameters: didSelectRowAtIndexPath
+    *Last Modified: 5/6/15
+    *Author: Josh
+    *Purpose: Pass the correct current chemical that app wants to work with
+    */
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        //print(String((displayList[indexPath.row] as Chemical).name))
         theInventoryModel.getCurrentChemical(String((displayList[indexPath.row] as Chemical).name))
         performSegueWithIdentifier("ItemDetail", sender: self)
     }
@@ -112,12 +117,6 @@ class DetailViewController: UIViewController {
         if (cell == nil){
             cell = UITableViewCell(style:UITableViewCellStyle.Default, reuseIdentifier:simpleTableIdentifier)
         }
-        //        let image = UIImage(named: "star")
-        //        cell!.imageView?.image = image
-        //        let highlightedImage = UIImage(named: "star")
-        //        cell!.imageView?.image = highlightedImage
-        
-        //cell?.textLabel?.text = string(displayList[indexPath.row])
         cell?.textLabel?.text = String((displayList[indexPath.row] as Chemical).name)
         cell?.textLabel?.font = UIFont.boldSystemFontOfSize(10)
         
