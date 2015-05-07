@@ -160,7 +160,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Euo-N2-WKw" kind="show" id="P9v-R7-LnO"/>
+                                            <segue destination="Euo-N2-WKw" kind="show" identifier="ItemDetail" id="P9v-R7-LnO"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -190,10 +190,10 @@
             </objects>
             <point key="canvasLocation" x="2095" y="-840"/>
         </scene>
-        <!--View Controller-->
+        <!--Item Detail View-->
         <scene sceneID="gMd-EV-dLL">
             <objects>
-                <viewController id="Euo-N2-WKw" sceneMemberID="viewController">
+                <viewController id="Euo-N2-WKw" customClass="itemDetailView" customModule="chemCat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Wwt-Zb-u2d"/>
                         <viewControllerLayoutGuide type="bottom" id="WJI-Z0-610"/>
@@ -201,6 +201,17 @@
                     <view key="view" contentMode="scaleToFill" id="c2Y-hm-4Eb">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9YO-uN-Qaq">
+                                <rect key="frame" x="16" y="15" width="35" height="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="XF8-5y-HDp" kind="show" identifier="backtoinventory" id="a4z-v7-Xwj"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -220,7 +231,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chemical Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOr-EJ-Q0b">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Chemical Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dOr-EJ-Q0b">
                                 <rect key="frame" x="33" y="151" width="127" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="J6S-tt-mnX"/>
@@ -229,7 +240,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quantity:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q61-d4-FA2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Quantity:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q61-d4-FA2">
                                 <rect key="frame" x="33" y="219" width="70" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="9Ja-xT-a3l"/>
@@ -238,25 +249,25 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EHS?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZq-XO-3rb">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="EHS?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wZq-XO-3rb">
                                 <rect key="frame" x="33" y="250" width="44" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expiration Date:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nd-Nv-yPW">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Expiration Date:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3nd-Nv-yPW">
                                 <rect key="frame" x="33" y="281" width="123" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Four Digit Barcode:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pdp-2x-8Rh">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Four Digit Barcode:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pdp-2x-8Rh">
                                 <rect key="frame" x="33" y="314" width="149" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="i.e., Carbon Monoxide" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0gp-xZ-Gen">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="i.e., Carbon Monoxide" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0gp-xZ-Gen">
                                 <rect key="frame" x="336" y="147" width="212" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="212" id="BNv-od-Ifa"/>
@@ -265,7 +276,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="i.e., mL or grams or liters" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GWr-XJ-qEJ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="i.e., mL or grams or liters" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GWr-XJ-qEJ">
                                 <rect key="frame" x="336" y="181" width="212" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="xa9-q1-gIT"/>
@@ -273,7 +284,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vaj-XR-AfW">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vaj-XR-AfW">
                                 <rect key="frame" x="336" y="215" width="212" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="nh1-b3-T1X"/>
@@ -281,7 +292,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PS7-Ft-OIM">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PS7-Ft-OIM">
                                 <rect key="frame" x="336" y="247" width="212" height="29"/>
                                 <segments>
                                     <segment title="Yes"/>
@@ -291,17 +302,17 @@
                                     <action selector="EHSSegmentToggle:" destination="3B3-jb-zX8" eventType="valueChanged" id="jT5-Kp-71e"/>
                                 </connections>
                             </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="By year" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7zf-G8-Vjk">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="By year" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7zf-G8-Vjk">
                                 <rect key="frame" x="336" y="277" width="212" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tjs-h6-XSg">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tjs-h6-XSg">
                                 <rect key="frame" x="336" y="311" width="212" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8m-EW-i90">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L8m-EW-i90">
                                 <rect key="frame" x="234" y="372" width="133" height="30"/>
                                 <state key="normal" title="Make It Real, Baby.">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -310,7 +321,7 @@
                                     <action selector="addChemicalOnClick:" destination="3B3-jb-zX8" eventType="touchUpInside" id="Kls-FP-EbP"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Units measured in:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsG-rX-30J">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Units measured in:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsG-rX-30J">
                                 <rect key="frame" x="33" y="185" width="144" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="d1k-de-Jij"/>
@@ -584,7 +595,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="Euo-N2-WKw" kind="show" id="zts-qf-TNx"/>
+                                            <segue destination="Euo-N2-WKw" kind="show" identifier="ItemDetail" id="zts-qf-TNx"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -784,9 +795,9 @@
         <image name="logo" width="406" height="396"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="pIC-3B-cLe"/>
         <segue reference="zts-qf-TNx"/>
-        <segue reference="5g4-BE-Oap"/>
+        <segue reference="tEC-rq-fdO"/>
+        <segue reference="a4z-v7-Xwj"/>
         <segue reference="xF4-oo-q8V"/>
     </inferredMetricsTieBreakers>
 </document>

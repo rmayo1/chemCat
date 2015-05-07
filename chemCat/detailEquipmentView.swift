@@ -37,6 +37,10 @@ class detailEquipmentController: UIViewController {
         }
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier("ItemDetail", sender: self)
+    }
+    
     override func viewDidLoad() {
         if (theInventoryModel.mode == "Equipment"){
             displayList = theInventoryModel.equipmentList
@@ -69,6 +73,7 @@ class detailEquipmentController: UIViewController {
         //cell?.textLabel?.text = string(displayList[indexPath.row])
         cell?.textLabel?.text = String((displayList[indexPath.row] as Equipment).name)
         cell?.textLabel?.font = UIFont.boldSystemFontOfSize(10)
+        theInventoryModel.getCurrentEquipment(String((displayList[indexPath.row] as Equipment).name))
         
         return cell!
     }

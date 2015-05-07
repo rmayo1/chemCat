@@ -25,7 +25,8 @@ class sharedInventoryModel {
     var outItemsList: [LabMaterial] //list of labMaterials
     var mode:String //mode, or current list viewed
     var admin:Bool
-    
+    var currChemical:Chemical
+    var currEquipment:Equipment
     
     /* func: init
     * Parameters: N/A
@@ -37,6 +38,8 @@ class sharedInventoryModel {
     init(){
         admin=false
         mode=""
+        currChemical = Chemical(barcode: 00000000, name: "DefaultChemical", stock:1, userNames: [],expDate:3000,units:"ml",ehs:false)
+        currEquipment = Equipment(barcode:00000000,name: "DefaultEquipment", stock:1, userNames: [], condition:"nil", breakable:false)
         equipmentList = [Equipment]()
         outItemsList = [LabMaterial]()
         chemicalList = [Chemical]()
@@ -53,6 +56,28 @@ class sharedInventoryModel {
         addEquipment(myEquipment2)
     }
     
+    /*func getCurrentChemical
+    *Author: Josh
+    */
+    func getCurrentChemical(thingName:String){
+        for chemicals in chemicalList {
+            if chemicals.getName() == thingName {
+                currChemical = chemicals
+            }
+        }
+    }
+    
+    /*func getCurrentEquipment
+    *Author: Josh
+    */
+    func getCurrentEquipment(thingName:String){
+        for equipments in equipmentList{
+            if equipments.getName() == thingName {
+                currEquipment = equipments
+            }
+        }
+    }
+
     /* func: addChemical
     * Parameters: chemical to be added
     * Output: N/A

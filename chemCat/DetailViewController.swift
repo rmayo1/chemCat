@@ -100,6 +100,9 @@ class DetailViewController: UIViewController {
         return displayList.count
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier("ItemDetail", sender: self)
+    }
     
     
     func tableView(tableView:UITableView, cellForRowAtIndexPath indexPath:NSIndexPath) -> UITableViewCell {
@@ -115,6 +118,7 @@ class DetailViewController: UIViewController {
         //cell?.textLabel?.text = string(displayList[indexPath.row])
         cell?.textLabel?.text = String((displayList[indexPath.row] as Chemical).name)
         cell?.textLabel?.font = UIFont.boldSystemFontOfSize(10)
+        theInventoryModel.getCurrentChemical(String((displayList[indexPath.row] as Chemical).name))
         
         return cell!
     }
