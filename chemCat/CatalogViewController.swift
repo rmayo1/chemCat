@@ -31,7 +31,7 @@ class CatalogViewController: UIViewController, UITableViewDataSource, UITableVie
     // creates variables for array use
     var objects = NSMutableArray()
     private let categories = [
-        "Chemicals", "Tools", "Equipment"]
+        "Chemicals", "Equipment"]
     let simpleTableIdentifier = "SimpleTableIdentifier"
 
     override func awakeFromNib() {
