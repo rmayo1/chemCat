@@ -43,6 +43,8 @@ class detailEquipmentController: UIViewController {
     }
     
     override func viewDidLoad() {
+        
+        //test code
         if (theInventoryModel.mode == "Equipment"){
             displayList = theInventoryModel.equipmentList
         }
@@ -51,6 +53,8 @@ class detailEquipmentController: UIViewController {
         }
         println(theInventoryModel.mode)
         println(displayList.count)
+        
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
